@@ -13,13 +13,13 @@ In the first few days of my reading about Ironic, and attending a few community 
 
 <h3>Digging deeper</h3>
 Ironic consumes requests from the users via the <a href='https://restfulapi.net/'>RESTful</a> <b>ironic-api</b>, and sends them to the <b>ironic-conductor</b>, which is the main component responsible for managing the baremetal nodes. It is responsible for turning the node on/off, adding/editing/deleting the nodes, and cleaning, provisioning, and deploying the node. 
-The components of the conductor that perform the actual hardware management are called ‘<b>drivers</b>’ or ‘<b>hardware types</b>’. Drivers are composed of ‘<b>interfaces</b>’ to perform certain functions: like power management, hardware inspection, etc. For example, the iDRAC driver supports: 
+The components of the conductor that perform the actual hardware management are called ‘<b>drivers</b>’ or ‘<b>hardware types</b>’. Drivers are composed of ‘<b>interfaces</b>’ to perform certain functions: like power management, hardware inspection, etc. For example, the iDRAC driver supports:
 * BIOS Interface: BIOS management
 * Inspect Interface: Hardware inspection
 * Management Interface: Boot device and firmware management
 * Power Interface: Power management
 * RAID Interface: RAID controller and disk management 
-* Vendor Interface: BIOS management (using WSMAN protocol) and eject virtual media (Redfish protocol)
+* Vendor Interface: BIOS management (using WSMAN protocol) and eject virtual media (Redfish protocol) 
 
 In order to support a wide range of hardware, Ironic supports some generic drivers and some vendor-specific drivers. The generic drivers supported by most hardware are <b>IPMI</b> and <b>Redfish</b>, and vendors can implement their own drivers as well to add more functionality. For example, Dell has the iDRAC driver, HP has the iLO driver, and Huawei has iBMC. The hardware and driver must at least have support for the following features:
 * Getting and setting the power state of the machine
