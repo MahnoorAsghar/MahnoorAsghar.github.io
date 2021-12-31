@@ -6,8 +6,8 @@ date:   2021-12-15 10:36:00 +0500
 categories: ["Outreachy"]
 ---
 
-<h3>Introducting me</h3>
-I am Mahnoor Asghar, a software engineer who graduated from NUST, Pakistan. I have been accepted into the Outreachy program for the December 2021 - March 2022 round, and I will be using this blog to share my journey :) Welcome aboard!
+<h3>Introducing me</h3>
+I am Mahnoor Asghar, a software engineer who graduated from National University of Sciences and Technology (NUST), Pakistan. I have been accepted into the Outreachy program for the December 2021 - March 2022 round, and I will be using this blog to share my journey :) Welcome aboard!
 My hobbies tend to change with time but I always enjoy reading books, be it classic or dystopian. It helps me unwind after a long day, and learn more in general. Other than that, an occasional movie or TV show, and a tea with friends is my idea of an evening well spent.
 I value integrity and reliability in people, and try to apply these principles practically myself as well. Dependability and trustworthiness are very important to me, be it in a personal context or professional. 
 

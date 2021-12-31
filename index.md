@@ -9,5 +9,5 @@ sitemap:
 <img src="{{ '/assets/img/dp.jpg' | prepend: site.baseurl }}" id="about-img">
 
 <div id="describe-text">
-	<p>Welcome to my blog! I am a software engineer from Pakistan. I will be sharing my experience with Outreachy here, among other things. Happy reading!</p>
+	Welcome to my <a href="{{ 'blog' }}">blog</a>! I am a software engineer from Pakistan. I will be sharing my experience with Outreachy here, among other things. Happy reading!
 </div>
