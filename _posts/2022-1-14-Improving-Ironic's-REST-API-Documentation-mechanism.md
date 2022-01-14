@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Describing my Outreachy project"
+title: "Improving Ironic's REST API Documentation mechanism"
 subtitle: ""
 date: 2022-01-14 10:00:00 +0500
 categories: ["Outreachy"]
@@ -9,9 +9,9 @@ categories: ["Outreachy"]
 Hello everyone!
 In this post I will try to explain why there was a need to re-think the way Ironic's REST API documentation was being generated, which became my Outreachy project. 
 
-Have you ever been in a situation where you tried to use a software or library you found online, and it seems to offer you exactly the functionality you require, in the language of your choice. The community looks active, and the project looks stable. But when you try to use it, there is little comprehensive material you can find to quickly help you get up and running. You try to understand it through release notes, googling, looking over the code a little. But you have a deadline, and the code is too complex to understand at a glance. All you needed was an overview of and details about the API. But you may end up abandoning the library as using it would require too much time and effort. 
+Have you ever been in a situation where you tried to use a software or library you found online, and it seems to offer you exactly the functionality you require, in the language of your choice? The community looks active, and the project looks stable. But when you try to use it, there is little comprehensive material you can find to quickly help you get up and running. You try to understand it through release notes, googling, looking over the code a little. But you have a deadline, and the code is too complex to understand at a glance. All you needed was an overview of and details about the API, but you may end up abandoning the library as using it would require too much time and effort. 
 
-It is important for users and developers to be able to access API and/or code documentation quickly and easily. And keeping it up to date is also important, as the project evolves and new features are constantly being developed or existing ones changed.
+It is important for users and developers to be able to access API and/or code documentation quickly and easily. Keeping the documentation up to date is also important, as the project evolves and new features are constantly being developed or existing ones changed.
 
 <h3>Current status</h3>
 Currently, the Ironic API documentation is stored in a sub-directory in the Ironic repository, separate from the directory in which the API code is stored. This means that the developers need to remember to alter/add to the documentation in a place that is quite separate from the code, which means it often can be forgotten about. Ensuring that the documentation stays updated is a significant effort of sorts, especially when the project is open source and contributors from all over the world are simultaneously working on different parts of it. And we all know how easy it is to forget to update the docs in the excitement of implementation!
@@ -20,7 +20,7 @@ The goal is to move the documentation closer to the API code, so that it is easy
 
 As we can see, in order to generate this documentation, there are a lot of moving parts performing various functions. Lets try to untangle this a little further, to get more insight into how, if at all, we can modify our use of Sphinx to ease the effort of maintaining its API documentation.
 
-The input files are parsed, and Restructured Text (reST) files are generated from them. 
+The input markdown files are parsed, and Restructured Text (reST) files are generated from them. 
 Sphinx uses ‘<b>docutils</b>’ (a python text-processing system) to convert the generated reST into the desired output format (e.g. PDF). Docutils converts input text (e.g. in reST format) into output formats (e.g. LaTeX, HTML etc). It is composed of many readers, parsers and writers, in order to parse and generate outputs in multiple formats.
 
 <h3>Possible Solution</h3>
